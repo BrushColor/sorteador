@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/logo.svg"
+      type="image/x-icon"
+    />
+
+    <title>NUMBERS</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img src="assets/logo.png" alt="Logo e nome da empresa NUMBERS" />
+      </div>
+    </header>
+    <main class="container">
+      <section class="about">
+        <p id="overline">online - gratuito</p>
+        <h1>
+          sorteador <br />
+          de números
+        </h1>
+        <div class="how-to-use">
+          <div class="how-it-works">
+            <div class="question">
+              <img src="assets/icons/chat.svg" alt="Ícone de pergunta em balão de diálogo" />
+              <span> Como funciona o sorteador de números? </span>
+            </div>
+            <p>
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
+          <div class="how-it-works">
+            <div class="question">
+              <img src="assets/icons/chat.svg" alt="Ícone de pergunta em balão de diálogo" />
+              <span> Posso escolher o intervalo dos números? </span>
+            </div>
+            <p>
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="drawer">
+        <div id="text-wrapper">
+          <h2>Quero Sortear:</h2>
+          <p>
+            Defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+        </div>
+        <form>
+          <div class="input-wrapper">
+            <label for="number-to-draw">números</label>
+            <div class="input-border">
+              <input
+                id="number-to-draw"
+                type="number"
+                placeholder="2"
+                min="1"
+              />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="lower-number">de</label>
+            <div class="input-border">
+              <input id="lower-number" type="number" placeholder="1" min="0" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="upper-number">Até</label>
+            <div class="input-border">
+              <input
+                id="upper-number"
+                type="number"
+                placeholder="100"
+                min="1"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="toggle-container">
+          <button id="toggle-button" class="toggle">
+            <img src="assets/icons/toggle-elipse.svg" alt="Indicador visual para alternância de números repetidos" />
+          </button>
+          <p>Não repetir número</p>
+        </div>
+        <div class="button-container">
+          <button id="draw-button">
+            sortear
+            <img src="assets/icons/arrow-right.svg" alt="Seta para iniciar sorteio de números" />
+          </button>
+        </div>
+      </section>
+      <section id="results" class="hidden">
+        <h2>resultado do sorteio</h2>
+        <p><span>1</span>º resultado</p>
+        <div id="results-numbers">
+          <!-- nº sorteado add aqui -->
+        </div>
+        <div class="button-container">
+          <button id="button-again">
+            sortear novamente
+            <div id="replay-wrapper">
+              <img
+                src="./assets/icons/play1.svg"
+                alt="Ícone de jogar novamente, seta de play"
+                class="play-icon"
+              />
+              <img
+                src="./assets/icons/replay1.svg"
+                alt="Ícone de repetição para jogar novamente"
+                class="replay-icon"
+              />
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <img id="background-main" src="assets/background.png" alt="Fundo com efeito gráfico para página do sorteador" />
+    <script src="script.js"></script>
+  </body>
+</html>
